@@ -16,6 +16,7 @@ AOS.init({
     loop: true,
     spaceBetween: 24,
     grabCursor: true,
+    watchSlidesProgress: true,
     autoplay: {
         delay: 4000,
         disableOnInteraction: false,

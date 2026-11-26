@@ -4,116 +4,125 @@ const destinations = {
         location: "Bali",
         image: "assets/images/bali-monument.jpg",
         duration: "3 Hari 2 Malam",
-        description: "Bali adalah salah satu pulau yang paling terkenal di kepulauan Indonesia. Pulau ini merupakan rumah dari banyak budaya kuno dan terkenal dengan keramahannya yang hangat. Bali menjadi salah satu tempat wisata mancanegara yang populer karena memiliki keindahan alam yang menakjubkan, kebudayaan yang kaya, serta fasilitas wisata yang lengkap. Berikut beberapa faktor yang menjadikan Bali sebagai salah satu destinasi wisata internasional yang menarik:",
-        poin: [
+        itinerary: [
             {
-                subDesc: "Keindahan Alam",
-                isi: "Bali memiliki pantai yang indah, gunung berapi yang menakjubkan, dan sawah terasering yang spektakuler. Keindahan alam ini menarik minat wisatawan untuk menikmati liburan yang santai dan menikmati keindahan alam.",
+                title: "Hari 1: KEDATANGAN – PESONA BALI SELATAN – JIMBARAN",
+                description: `Setibanya di Bandara Internasional I Gusti Ngurah Rai, Anda akan disambut dengan kalungan bunga dan langsung diantar menjelajahi pesona Bali bagian selatan. Destinasi pertama adalah Pantai Melasti atau Pantai Pandawa yang terkenal dengan tebing kapur menjulang dan air lautnya yang jernih. Menjelang sore, perjalanan berlanjut menuju Pura Luhur Uluwatu yang berdiri kokoh di atas tebing curam menghadap Samudra Hindia, tempat Anda dapat menyaksikan pertunjukan Tari Kecak dan Api dengan latar matahari terbenam yang memukau. Malam harinya, Anda diajak menikmati makan malam hidangan laut (seafood) di tepi Pantai Jimbaran sebelum diantar menuju hotel di kawasan Kuta atau Seminyak untuk check-in dan bermalam.`,
             },
             {
-                subDesc: "Kebudayaan",
-                isi: "Bali memiliki kebudayaan yang unik dan kaya, seperti tari-tarian tradisional, seni ukir, dan kepercayaan agama Hindu. Hal ini menarik minat wisatawan yang ingin mempelajari dan mengalami kebudayaan Bali.",
+                title: "Hari 2: KINTAMANI – TEGALALANG – PUSAT SENI UBUD",
+                description: `Setelah sarapan di hotel, Anda diajak bergerak menuju dataran tinggi Kintamani untuk menikmati udara sejuk sambil makan siang dengan panorama langsung menghadap Gunung Batur dan Danau Batur yang tenang. Perjalanan turun melewati kawasan Tegalalang untuk melihat keindahan terasering sawah hijau yang ikonik. Memasuki kawasan Ubud, Anda diajak berjalan-jalan santai melewati Puri Saren Agung (Istana Ubud) dan menikmati waktu bebas di Pasar Seni Ubud untuk berburu kerajinan tangan, lukisan, maupun kain khas Bali. Menjelang malam, Anda diantar kembali ke hotel untuk beristirahat.`,
             },
             {
-                subDesc: "Fasilitas Wisata yang Lengkap",
-                isi: "Bali memiliki fasilitas wisata yang lengkap, seperti hotel dan resort bintang lima, restoran internasional, spa, dan berbagai tempat hiburan yang menarik. Semua fasilitas ini menjadikan Bali sebagai destinasi wisata yang sangat nyaman dan memanjakan para wisatawan.",
+                title: "Hari 3: BELANJA OLEH-OLEH – KEPULANGAN",
+                description: `Setelah sarapan dan proses check-out dari hotel, Anda diajak singgah ke pusat oleh-oleh terbesar di Bali seperti Krisna atau The Keranjang untuk membeli camilan khas seperti Pie Susu, Kacang Disco, hingga kopi Bali. Jika waktu masih mencukupi, Anda dapat berjalan-jalan sejenak di sekitar kawasan pantai Kuta sebelum akhirnya diantar menuju Bandara Ngurah Rai untuk penerbangan kembali ke kota asal.`,
             },
-            {
-                subDesc: "Ramah Tamah",
-                isi: "Bali dikenal sebagai daerah yang ramah dan penuh keramahan. Kehangatan penduduk setempat dan budaya gotong royong menjadikan Bali sebagai tempat yang menyenangkan untuk dikunjungi.",
-            },
-            {
-                subDesc: "Aksesibilitas",
-                isi: "Bali dapat diakses dengan mudah dari berbagai negara melalui bandara internasional Ngurah Rai. Selain itu, Bali juga memiliki transportasi publik yang cukup baik dan memudahkan wisatawan untuk berkeliling ke berbagai tempat wisata di Bali.",
-            },
-        ]
+        ],
+        includes: [
+            "Transportasi pribadi ber-AC selama 3 hari (termasuk BBM dan biaya parkir).",
+            "Penjemputan dan pengantaran dari/ke Bandara Internasional I Gusti Ngurah Rai.",
+            "Akomodasi hotel pilihan selama 2 malam di kawasan Kuta/Seminyak/Legian.",
+            "Tiket masuk objek wisata sesuai jadwal (Pantai Melasti/Pandawa, Pura Uluwatu, dan Tegalalang).",
+            "Tiket menonton pertunjukan Tari Kecak dan Api Uluwatu.",
+            "Konsumsi sesuai jadwal (2x sarapan di hotel, 1x makan siang di Kintamani, 1x makan malam seafood di Jimbaran).",
+            "Air mineral harian selama perjalanan dan driver ramah yang membantu dokumentasi.",
+        ],
     },
     "raja-ampat": {
         name: "Raja Ampat",
         location: "Papua Barat Daya",
         image: "assets/images/raja-ampat-beach.jpg",
         duration: "2 Hari 1 Malam",
-        description: "Terletak di Provinsi Papua Barat Daya, Kepulauan Raja Ampat dikenal sebagai salah satu destinasi wisata bahari paling memukau di dunia. Gugusan pulau karst yang menjulang di atas perairan jernih berwarna biru kehijauan menciptakan lanskap ikonik yang sulit ditemukan di tempat lain. Selain menyuguhkan keindahan alam yang luar biasa, wilayah ini juga menyimpan kekayaan budaya masyarakat adat Papua yang hidup berdampingan secara harmonis dengan alam sekitarnya.",
-        poin: [
+        itinerary: [
             {
-                subDesc: "Pusat Keanekaragaman Hayati Laut Dunia",
-                isi: "Raja Ampat berada di jantung Segitiga Terumbu Karang Dunia (Coral Triangle) dan memiliki sekitar 75% spesies karang yang dikenal di bumi. Perairannya menjadi rumah bagi lebih dari 1.500 spesies ikan, penyu, hiu karang, hingga pari manta yang dapat dijumpai dengan mudah saat menyelam atau snorkeling."
+                title: "Hari 1: SORONG – WAISAI – PIAYNEMO – YENBUBA",
+                description: `Perjalanan dimulai pada pagi hari dengan penjemputan di Bandara Domine Eduard Osok Sorong menuju Pelabuhan Rakyat untuk menyeberang menggunakan kapal cepat menuju Waisai, ibu kota Kabupaten Raja Ampat. Setibanya di Waisai, Anda langsung diajak island hopping menuju Piaynemo, ikon utama Raja Ampat, di mana Anda akan mendaki anak tangga kayu untuk menyaksikan gugusan pulau karst di atas lautan biru toska. Tak jauh dari sana, Anda singgah di Telaga Bintang yang membentuk bintang alami bila dilihat dari puncak bukit. Setelah makan siang di Desa Wisata Sauwandarek sambil berinteraksi dengan warga lokal, Anda diajak snorkeling di Dermaga Yenbuba yang terkenal dengan taman karang dan ribuan ikan warna-warni. Menjelang malam, Anda diantar menuju resor atau homestay tepi pantai untuk makan malam dan bermalam.`,
             },
             {
-                subDesc: "Gugusan Pulau Karst yang Ikonik",
-                isi: "Wilayah ini terdiri atas empat pulau utama—Waigeo, Misool, Salawati, dan Batanta—yang dikelilingi oleh lebih dari 1.500 pulau kecil dan gundukan batu karst. Pemandangan dari puncak bukit di Wayag dan Piaynemo menampilkan deretan pulau-pulau hijau yang tersebar rapi di tengah laguna biru jernih."
+                title: "Hari 2: PASIR TIMBUL – WAISAI – SORONG",
+                image: "assets/images/day-2-raja-ampat.jfif",
+                description: `Setelah sarapan dengan pemandangan laut yang tenang, Anda diajak mengunjungi Pasir Timbul Mansuar, hamparan pasir putih halus yang hanya muncul di tengah lautan saat air sedang surut, menjadi lokasi sempurna untuk berfoto dan berenang santai. Perjalanan dilanjutkan kembali menuju Waisai untuk makan siang, berbelanja suvenir khas Papua, dan bersiap-siap. Pada sore hari, Anda akan menaiki kapal cepat kembali menuju Pelabuhan Sorong dan langsung diantar menuju Bandara Sorong atau hotel setempat untuk mengakhiri rangkaian perjalanan.`,
             },
-            {
-                subDesc: "Legenda Asal-Usul Nama Empat Raja",
-                isi: "Nama \"Raja Ampat\" berasal dari mitos lokal tentang seorang wanita yang menemukan tujuh butir telur naga. Empat di antara telur tersebut menetas menjadi pangeran yang kemudian berpisah dan menjadi raja di empat pulau utama: Waigeo, Misool, Salawati, dan Batanta."
-            },
-            {
-                subDesc: "Rumah bagi Burung Cenderawasih Endemik",
-                isi: "Tidak hanya kaya di bawah laut, hutan hujan tropis Raja Ampat juga menjadi habitat bagi satwa darat langka, termasuk burung cenderawasih merah (Paradisaea rubra) dan cenderawasih botak (Cicinnurus respublica). Wisatawan dapat mengamati tarian indah burung-burung surga ini di habitat aslinya pada pagi hari."
-            },
-            {
-                subDesc: "Tradisi Adat Sasi untuk Konservasi Alam",
-                isi: "Masyarakat adat di Raja Ampat menerapkan kearifan lokal bernama sasi, yaitu larangan sementara untuk mengambil hasil laut tertentu seperti teripang, lobster, dan kerang lola. Tradisi turun-temurun ini terbukti efektif menjaga populasi biota laut tetap lestari sekaligus mendukung ekonomi masyarakat lokal secara berkelanjutan."
-            }
-        ]
+        ],
+        includes: [
+            "Penjemputan dan pengantaran dari/ke Bandara Domine Eduard Osok, Sorong.",
+            "Tiket kapal cepat (fast boat) pulang-pergi rute Sorong – Waisai.",
+            "Sewa speedboat pribadi selama kegiatan island hopping.",
+            "Akomodasi homestay atau resor tepi pantai selama 1 malam di area Waisai/sekitarnya.",
+            "Konsumsi lengkap selama tur (sarapan, makan siang, dan makan malam).",
+            "Peralatan snorkeling lengkap dan pelampung (life jacket).",
+            "Pemandu wisata lokal, dokumentasi foto/video, serta air mineral selama perjalanan.",
+        ],
+        includesNote: "Biasanya tidak termasuk PIN/Tarif Layanan Pemeliharaan Lingkungan Raja Ampat bagi wisatawan domestik/mancanegara, yang dapat dibayarkan langsung di lokasi.",
     },
     bromo: {
         name: "Bromo",
         location: "Jawa Timur",
         image: "assets/images/bromo-sunrise.jpg",
         duration: "4 Hari 3 Malam",
-        description: "Gunung Bromo merupakan salah satu gunung berapi aktif paling ikonik di Indonesia yang terletak di kawasan Taman Nasional Bromo Tengger Semeru (TNBTS), Jawa Timur. Wilayahnya mencakup empat kabupaten, yakni Probolinggo, Pasuruan, Lumajang, dan Malang. Dengan ketinggian sekitar 2.329 meter di atas permukaan laut, Bromo menawarkan lanskap vulkanik dramatis berupa hamparan lautan pasir luas, kepulan asap kawah yang terus aktif, serta latar belakang puncak Gunung Semeru yang gagah.",
-        poin: [
+        itinerary: [
             {
-                subDesc: "Panorama Matahari Terbit dari Puncak Penanjakan",
-                isi: "Bromo sangat terkenal dengan pemandangan sunrise-nya yang memukau. Dari titik pandang tinggi seperti Penanjakan 1, Bukit Kingkong, atau Bukit Cinta, wisatawan dapat menyaksikan semburat cahaya jingga perlahan menyinari gugusan Gunung Bromo, Gunung Batok, dan Gunung Semeru yang diselimuti kabut tipis."
+                title: "Hari 1: KEDATANGAN – KOTA WISATA BATU",
+                image: "assets/images/day-1-bromo.jfif",
+                description: `Setibanya Anda di titik penjemputan (Bandara Abdulrachman Saleh atau Stasiun Malang/Surabaya), Anda akan langsung disambut oleh tim kami dan diantar menuju kawasan dataran tinggi Kota Batu yang sejuk. Perjalanan dimulai dengan mengunjungi Coban Rondo, air terjun legendaris yang dikelilingi hutan pinus asri, serta berfoto di Taman Langit Gunung Banyak yang menawarkan panorama Kota Batu dari ketinggian. Menjelang sore, Anda diajak singgah di Alun-Alun Kota Batu untuk mencicipi jajanan hangat khas setempat sebelum diantar menuju hotel di kawasan Batu atau Malang untuk check-in dan bermalam.`,
             },
             {
-                subDesc: "Lautan Pasir Berbisik dan Kawah Aktif",
-                isi: "Berbeda dari kebanyakan gunung berapi lainnya, Gunung Bromo dikelilingi oleh hamparan pasir vulkanik seluas sekitar 10 kilometer persegi yang dikenal sebagai Pasir Berbisik. Dari area parkir jip di lautan pasir, pengunjung dapat berjalan kaki atau menunggang kuda menuju kaki gunung, lalu menaiki ratusan anak tangga untuk melihat langsung bibir kawah Bromo yang terus mengeluarkan asap belerang."
+                title: "Hari 2: PETUALANGAN BROMO – SUNRISE PENANJAKAN",
+                image: "assets/images/day-2-bromo.jfif",
+                description: `Dini hari sekitar pukul 00.30, Anda akan dijemput menggunakan kendaraan Jeep 4WD menuju kawasan Taman Nasional Bromo Tengger Semeru. Destinasi pertama adalah Penanjakan 1 atau Bukit Kingkong untuk menantikan momen matahari terbit (sunrise) dengan latar jajaran Gunung Bromo, Batok, dan Semeru yang megah. Setelah puas mengabadikan momen, perjalanan turun menuju Lautan Pasir untuk mendaki anak tangga menuju bibir Kawah Bromo. Petualangan dilanjutkan melintasi Pasir Berbisik yang eksotis dan singgah di Bukit Teletubbies (Padang Sabana) yang hijau membentang. Menjelang siang, Anda diantar kembali menuju penginapan untuk bersih-bersih dan beristirahat.`,
             },
             {
-                subDesc: "Keindahan Savana dan Bukit Teletubbies",
-                isi: "Di sisi selatan kaldera Bromo terdapat padang rumput hijau yang luas dan perbukitan bergelombang yang dijuluki Bukit Teletubbies. Pemandangan hijau yang sejuk ini memberikan kontras yang sangat menarik dibandingkan dengan area lautan pasir yang tandus di sekitarnya."
+                title: "Hari 3: EKSPEDISI AIR TERJUN TUMPAK SEWU – WISATA KULINER MALANG",
+                image: "assets/images/day-3-bromo.jfif",
+                description: `Setelah sarapan di hotel, Anda diajak bergerak menuju wilayah selatan untuk menyaksikan kemegahan Air Terjun Tumpak Sewu yang dijuluki sebagai \"Niagara-nya Indonesia\" karena tirai airnya yang melebar di tebing melingkar. Anda dapat menikmati keindahan dari titik pandang atas maupun turun ke dasar lembah untuk merasakan kesegaran percikan airnya secara langsung. Pada sore hari, perjalanan kembali ke pusat Kota Malang untuk menikmati kuliner ikonik seperti Bakso President atau Rawon Rampal, dilanjutkan waktu bebas berbelanja oleh-oleh keripik buah dan Pia Cap Mangkok sebelum kembali ke hotel untuk bermalam.`,
             },
             {
-                subDesc: "Budaya Suku Tengger dan Upacara Yadnya Kasada",
-                isi: "Kawasan Bromo merupakan tempat tinggal masyarakat adat Suku Tengger yang mayoritas memeluk agama Hindu. Setiap tahun pada bulan Kasada dalam penanggalan Tengger, masyarakat setempat menggelar ritual Yadnya Kasada dengan mempersembahkan hasil bumi, ternak, dan sesajen ke dalam kawah Gunung Bromo sebagai wujud rasa syukur serta penghormatan kepada leluhur."
+                title: "Hari 4: SANTAI PAGI – KEPULANGAN",
+                image: "assets/images/day-4-bromo.jfif",
+                description: `Setelah sarapan pagi di hotel, Anda memiliki waktu bebas untuk menikmati udara segar pagi hari atau sekadar bersantai di area penginapan. Setelah proses check-out, Anda akan diantar kembali menuju Bandara atau Stasiun Malang/Surabaya sesuai dengan jadwal keberangkatan Anda. Perjalanan bersama kami pun berakhir dengan membawa pulang kenangan indah dari Jawa Timur.`,
             },
-            {
-                subDesc: "Petualangan Wisata Jip (Hardtop)",
-                isi: "Menjelajahi kawasan Bromo identik dengan menyewa kendaraan jip 4x4 (hardtop) berwarna-warni. Medan berpasir, tanjakan curam, serta suhu udara yang sangat dingin di dini hari menjadikan perjalanan melintasi kaldera Bromo sebagai pengalaman petualangan yang khas dan berkesan."
-            }
-        ]
+        ],
+        includes: [
+            "Transportasi darat ber-AC selama tur berlangsung (termasuk BBM, parkir, dan tol).",
+            "Penjemputan dan pengantaran dari/ke Bandara atau Stasiun (Malang/Surabaya).",
+            "Akomodasi hotel/penginapan selama 3 malam (sekamar berdua atau bertiga).",
+            "Sewa Jeep 4WD khusus untuk eksplorasi kawasan Taman Nasional Bromo.",
+            "Tiket masuk seluruh objek wisata sesuai jadwal (Bromo, Coban Rondo, Taman Langit, Tumpak Sewu).",
+            "Konsumsi sesuai program (3x sarapan di hotel).",
+            "Air mineral selama perjalanan dan driver sekaligus pemandu lokal yang berpengalaman.",
+        ],
     },
     "labuan-bajo": {
         name: "Labuan Bajo",
         location: "Nusa Tenggara Timur",
         image: "assets/images/labuan-bajo-beach.jpg",
         duration: "3 Hari 2 Malam",
-        description: "Terletak di Kecamatan Komodo, Kabupaten Manggarai Barat, Provinsi Nusa Tenggara Timur, Labuan Bajo telah bertransformasi dari sebuah desa nelayan kecil menjadi salah satu destinasi pariwisata super prioritas di Indonesia. Kota pelabuhan yang dikelilingi perbukitan hijau dan perairan biru tenang ini berfungsi sebagai pintu gerbang utama menuju Taman Nasional Komodo serta deretan pulau eksotis di sekitarnya. Perpaduan antara satwa purba, pantai berwarna merah muda, dan kekayaan bawah laut menjadikan Labuan Bajo magnet bagi wisatawan domestik maupun mancanegara.",
-        poin: [
+        itinerary: [
             {
-                subDesc: "Habitat Asli Komodo, Sang Kadal Purba",
-                isi: "Labuan Bajo adalah akses utama menuju Pulau Komodo dan Pulau Rinca, satu-satunya tempat di dunia di mana wisatawan dapat melihat langsung komodo (Varanus komodoensis) di alam liar. Kadal terbesar yang masih hidup di bumi ini hidup bebas di padang sabana kering dan hutan gugur tropis di bawah pengawasan ketat para pawang (ranger)."
+                title: "Hari 1: PULAU KELOR – MANJARITE – PULAU KALONG",
+                image: "assets/images/day-1-labuan-bajo.jfif",
+                description: `Setibanya di Bandara Komodo Labuan Bajo pada pagi hari, Anda langsung diantar menuju pelabuhan untuk memulai pengalaman berlayar (sailing trip) menggunakan kapal pinisi. Pelayaran pertama menuju Pulau Kelor, di mana Anda diajak trekking ringan menuju puncak bukit untuk melihat hamparan laut biru yang dikelilingi pulau-pulau kecil. Perjalanan berlanjut ke Pulau Manjarite untuk snorkeling perdana di perairan dangkal yang tenang dengan terumbu karang terjaga. Menjelang senja, kapal akan bersandar di dekat Pulau Kalong agar Anda dapat menyaksikan ribuan kelelawar terbang keluar dari hutan bakau dengan latar langit jingga matahari terbenam, dilanjutkan makan malam dan bermalam di atas kapal.`,
             },
             {
-                subDesc: "Panorama Tiga Teluk di Pulau Padar",
-                isi: "Pulau Padar menawarkan salah satu lanskap paling fotogenik di Indonesia. Setelah mendaki jalur perbukitan menuju puncaknya, pengunjung akan disuguhi pemandangan dramatis berupa tiga teluk melengkung yang memiliki warna pasir berbeda—putih, hitam, dan merah muda—yang diapit oleh bukit-bukit sabana tajam yang berubah warna menjadi hijau saat musim hujan dan keemasan saat kemarau."
+                title: "Hari 2: PULAU PADAR – PINK BEACH – PULAU KOMODO – MANTA POINT",
+                image: "assets/images/day-2-labuan-bajo.jfif",
+                description: `Pagi-pagi sekali, Anda diajak merapat ke Pulau Padar untuk mendaki menuju puncak tertinggi demi menyaksikan panorama tiga teluk ikonik dengan warna pasir yang berbeda. Setelah turun dari bukit, pelayaran berlanjut ke Pink Beach untuk bersantai di atas pasir merah muda yang langka dan berenang di airnya yang jernih. Siang harinya, Anda tiba di Pulau Komodo untuk melakukan trekking didampingi pemandu lokal (ranger) guna melihat langsung kehidupan komodo di habitat aslinya. Sore hari ditutup dengan berhenti di Taka Makassar, pulau pasir timbul berbentuk bulan sabit, serta snorkeling di Manta Point untuk berkesempatan berenang bersama ikan pari manta sebelum kapal kembali bersandar untuk makan malam dan bermalam.`,
             },
             {
-                subDesc: "Keunikan Pink Beach (Pantai Merah Muda)",
-                isi: "Labuan Bajo memiliki beberapa pantai berpasir merah muda yang sangat langka di dunia, seperti di Pulau Komodo dan Pulau Padar. Warna merah muda alami pada pasirnya berasal dari serpihan terumbu karang merah mikroskopis (Foraminifera) yang tercampur dengan pasir putih, berpadu cantik dengan air laut yang jernih berwarna biru toska."
+                title: "Hari 3: PULAU KANAWA – LABUAN BAJO – KEPULANGAN",
+                image: "assets/images/day-3-labuan-bajo.jfif",
+                description: `Setelah sarapan di atas kapal dengan suasana laut pagi yang damai, Anda diajak menuju Pulau Kanawa sebagai destinasi terakhir untuk snorkeling santai di dermaga yang dikelilingi bintang laut dan ikan-ikan kecil. Menjelang siang, kapal berlayar kembali menuju Pelabuhan Labuan Bajo. Setibanya di daratan, Anda memiliki waktu untuk singgah di pusat oleh-oleh khas Nusa Tenggara Timur seperti kain tenun songke dan kopi manggarai sebelum diantar menuju Bandara Komodo untuk penerbangan pulang.`,
             },
-            {
-                subDesc: "Pengalaman Berlayar dengan Kapal Phinisi (Liveaboard)",
-                isi: "Cara terbaik menikmati keindahan gugusan pulau di sekitar Labuan Bajo adalah dengan mengikuti pelayaran menginap di atas kapal kayu tradisional Phinisi. Wisatawan dapat menikmati matahari terbit dari atas dek kapal, singgah dari satu pulau ke pulau lain, hingga menyaksikan ribuan kelelawar terbang keluar dari hutan bakau di Pulau Kalong saat senja tiba."
-            },
-            {
-                subDesc: "Surga Selam dan Snorkeling Kelas Dunia",
-                isi: "Perairan di sekitar Taman Nasional Komodo merupakan pertemuan arus hangat dan dingin yang menciptakan ekosistem laut luar biasa kaya. Titik-titik seperti Manta Point, Batu Bolong, dan Pulau Kanawa terkenal sebagai lokasi terbaik untuk berenang bersama pari manta raksasa, penyu laut, hiu karang, serta ribuan spesies ikan di antara taman karang yang masih alami."
-            },
-        ]
+        ],
+        includes: [
+            "Penjemputan dan pengantaran dari/ke Bandara Komodo atau hotel area Labuan Bajo.",
+            "Sewa kapal pinisi/kapal wisata selama 3 hari 2 malam (kabin ber-AC sesuai pilihan).",
+            "Konsumsi lengkap selama berlayar di atas kapal (sarapan, makan siang, makan malam, serta snack sore, kopi, dan teh).",
+            "Peralatan snorkeling, pelampung (life jacket), dan perlengkapan keselamatan kapal.",
+            "Pemandu wisata lokal bersertifikat dan kru kapal yang berpengalaman.",
+            "Dokumentasi perjalanan (kamera underwater, mirrorless, dan drone).",
+        ],
+        includesNote: "Umumnya belum termasuk tiket masuk Taman Nasional Komodo dan retribusi ranger yang dibayarkan langsung sesuai kategori wisatawan.",
     },
 };
 
@@ -134,27 +143,62 @@ if (!destination) {
     document.querySelector(".detail-lokasi").textContent = destination.location;
     document.querySelector(".detail-judul").textContent = destination.name;
     document.querySelector(".detail-durasi").textContent = destination.duration;
-    document.querySelector(".detail-paragraf").textContent = destination.description;
+    const itineraryList = document.querySelector(".detail-itinerary");
+    itineraryList.hidden = false;
+    destination.itinerary.forEach((day) => {
+        const item = document.createElement("li");
+        item.className = "detail-itinerary-item";
 
-    const pointList = document.querySelector(".detail-poin");
-    if (destination.poin) {
-        pointList.hidden = false;
-        destination.poin.forEach((point) => {
-            const item = document.createElement("li");
-            item.className = "detail-poin-item";
+        const image = document.createElement("img");
+        image.className = "detail-itinerary-image";
+        image.src = day.image || destination.image;
+        image.alt = day.image ? day.title : "";
+        image.loading = "lazy";
+        image.decoding = "async";
 
-            const heading = document.createElement("h2");
-            heading.className = "detail-poin-judul";
-            heading.textContent = point.subDesc;
+        const copy = document.createElement("div");
+        copy.className = "detail-itinerary-copy";
 
-            const text = document.createElement("p");
-            text.className = "detail-poin-isi";
-            text.textContent = point.isi;
+        const heading = document.createElement("h2");
+        heading.className = "detail-itinerary-day";
+        day.title.split(" – ").forEach((part, index) => {
+            if (index > 0) {
+                const separator = document.createElement("i");
+                separator.className = "fa-solid fa-angle-right detail-itinerary-separator";
+                separator.setAttribute("aria-hidden", "true");
+                heading.append(separator, document.createTextNode(" "));
+            }
 
-            item.append(heading, text);
-            pointList.append(item);
+            const text = document.createElement("span");
+            text.textContent = part;
+            heading.append(text);
         });
+
+        const text = document.createElement("p");
+        text.className = "detail-itinerary-description";
+        text.textContent = day.description;
+
+        copy.append(heading, text);
+        item.append(image, copy);
+        itineraryList.append(item);
+    });
+
+    const includedSection = document.querySelector(".detail-fasilitas");
+    const includedList = document.querySelector(".detail-fasilitas-list");
+    destination.includes.forEach((facility) => {
+        const item = document.createElement("li");
+        item.className = "detail-fasilitas-item";
+        item.textContent = facility;
+        includedList.append(item);
+    });
+
+    if (destination.includesNote) {
+        const note = document.querySelector(".detail-fasilitas-note");
+        note.textContent = `Catatan: ${destination.includesNote}`;
+        note.hidden = false;
     }
+
+    includedSection.hidden = false;
 
     const destinationGrid = document.querySelector(".detail-lainnya-grid");
     for (const [key, other] of Object.entries(destinations)) {

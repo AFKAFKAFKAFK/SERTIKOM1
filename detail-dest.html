@@ -3,15 +3,16 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Detail Destinasi | Jelajah Nusa</title>
+    <title>Detail Paket | Jelajah Nusa</title>
     <link rel="icon" type="image/png" href="assets/images/plane-logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body class="halaman">
     <main class="detail-destinasi">
       <a class="detail-kembali" href="index.html#destinasi">Kembali ke destinasi</a>
-      <p class="detail-error" hidden>Destinasi tidak ditemukan. Silakan pilih destinasi dari halaman utama.</p>
+      <p class="detail-error" hidden>Paket tidak ditemukan. Silakan pilih destinasi dari halaman utama.</p>
       <article class="detail-kartu">
         <img class="detail-gambar" alt="">
         <div class="detail-konten">
@@ -20,12 +21,19 @@
             <h1 class="detail-judul"></h1>
             <p class="detail-durasi"></p>
           </header>
-          <p class="detail-paragraf"></p>
-          <ol class="detail-poin" hidden></ol>
+          <h2 class="detail-itinerary-title">Rangkaian Perjalanan</h2>
+          <ol class="detail-itinerary" aria-label="Rangkaian perjalanan" hidden></ol>
         </div>
       </article>
-      <section class="detail-lainnya" aria-label="Destinasi lainnya" hidden>
-        <h2 class="detail-subjudul">Lihat Artikel Lainnya</h2>
+      <section class="detail-fasilitas" aria-labelledby="detail-fasilitas-title" hidden>
+        <h2 class="detail-fasilitas-title" id="detail-fasilitas-title">
+          Fasilitas yang Termasuk
+        </h2>
+        <ul class="detail-fasilitas-list"></ul>
+        <p class="detail-fasilitas-note" hidden></p>
+      </section>
+      <section class="detail-lainnya" aria-label="Paket destinasi lainnya" hidden>
+        <h2 class="detail-subjudul">Paket Destinasi Lainnya</h2>
         <div class="detail-lainnya-grid"></div>
       </section>
     </main>
