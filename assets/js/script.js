@@ -52,6 +52,7 @@ const navbarCollapseElement = document.querySelector("#navbarNav");
 const chooser = document.querySelector("#package-chooser");
 const packageOptions = document.querySelector("#package-options");
 const bookingDetails = document.querySelector("#booking-details");
+const changePackageButton = document.querySelector("#change-package-button");
 const bookingForm = document.querySelector("#booking-form");
 const travelDate = document.querySelector("#travel-date");
 const nameInput = document.querySelector("#customer-name");
@@ -215,6 +216,13 @@ function showPackageDetails(packageKey) {
     bookingModal.show();
 }
 
+function showPackageChooser() {
+    selectedPackage = null;
+    document.querySelector("#paketLabel").textContent = "Pilih paket Anda";
+    chooser.hidden = false;
+    bookingDetails.hidden = true;
+}
+
 Object.entries(packages).forEach(([key, packageInfo]) => {
     const slide = document.createElement("div");
     slide.className = "swiper-slide";
@@ -254,9 +262,7 @@ Object.entries(packages).forEach(([key, packageInfo]) => {
     packageOptions.append(slide);
 });
 
-bookingModalElement.addEventListener("shown.bs.modal", () => {
-    if (chooser.hidden) return;
-
+function initializePackageSwiper() {
     if (!packageSwiper) {
         packageSwiper = new Swiper(".paket-swiper", {
             slidesPerView: 1,
@@ -275,6 +281,16 @@ bookingModalElement.addEventListener("shown.bs.modal", () => {
     }
 
     packageSwiper.slideTo(0, 0);
+}
+
+bookingModalElement.addEventListener("shown.bs.modal", () => {
+    if (chooser.hidden) return;
+    initializePackageSwiper();
+});
+
+changePackageButton.addEventListener("click", () => {
+    showPackageChooser();
+    initializePackageSwiper();
 });
 
     function closeMobileNavbar() {
@@ -333,10 +349,7 @@ updateActiveNavbarLink();
 document.querySelectorAll(".button-hero-2").forEach((button) => {
     button.addEventListener("click", (event) => {
         event.preventDefault();
-        selectedPackage = null;
-        document.querySelector("#paketLabel").textContent = "Pilih paket Anda";
-        chooser.hidden = false;
-        bookingDetails.hidden = true;
+        showPackageChooser();
         bookingModal.show();
     });
 });

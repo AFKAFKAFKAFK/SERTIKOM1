@@ -528,6 +528,10 @@
     font-size: 24px;
 }
 
+.tombol-ganti-paket {
+    border-color: #dfe5e2;;
+}
+
 .form-pemesanan .label-form, .form-kontak .label-form {
     font-size: 14px;
     font-weight: 700;

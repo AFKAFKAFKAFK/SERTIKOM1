@@ -282,6 +282,7 @@
                         <section class="detail-pemesanan" id="booking-details" hidden>
                             <h1 class="paket-header">Paket yang dipilih:</h1>
                             <div class="alert alert-primary ringkasan-paket" id="selected-package" role="status"></div>
+                            <button type="button" class="btn btn-outline-secondary tombol-ganti-paket mb-3" id="change-package-button">Ganti Paket</button>
                             <form class="form-pemesanan" id="booking-form" novalidate>
                                 <div class="mb-3">
                                     <label for="customer-name" class="form-label label-form">Nama pemesan</label>
@@ -374,16 +375,19 @@
             </div>
         </div>
         <div class="col-12 col-lg-6 kontak-right">
+            <div class="alert alert-info mb-3" id="contact-status" role="status" hidden></div>
             <form class="form-kontak" id="contact-form" novalidate>
-                <div class="mb-3">
-                    <label for="contact-name" class="form-label label-form">Nama Lengkap</label>
-                    <input type="text" class="form-control input-form" id="contact-name" name="name" autocomplete="name" required aria-describedby="contact-name-error">
-                    <div class="invalid-feedback" id="contact-name-error" aria-live="polite"></div>
-                </div>
-                <div class="mb-3">
-                    <label for="contact-email" class="form-label label-form">Email</label>
-                    <input type="email" class="form-control input-form" id="contact-email" name="email" autocomplete="email" required aria-describedby="contact-email-error">
-                    <div class="invalid-feedback" id="contact-email-error" aria-live="polite"></div>
+                <div class="row g-3 mb-3">
+                    <div class="col-12 col-md-6">
+                        <label for="contact-name" class="form-label label-form">Nama Lengkap</label>
+                        <input type="text" class="form-control input-form" id="contact-name" name="name" autocomplete="name" required aria-describedby="contact-name-error">
+                        <div class="invalid-feedback" id="contact-name-error" aria-live="polite"></div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <label for="contact-email" class="form-label label-form">Email</label>
+                        <input type="email" class="form-control input-form" id="contact-email" name="email" autocomplete="email" required aria-describedby="contact-email-error">
+                        <div class="invalid-feedback" id="contact-email-error" aria-live="polite"></div>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label for="contact-subject" class="form-label label-form">Subjek</label>
@@ -396,7 +400,6 @@
                     <div class="invalid-feedback" id="contact-message-error" aria-live="polite"></div>
                 </div>
                 <button type="submit" class="btn w-100 tombol-kirim">Kirim Pesan</button>
-                <div class="alert alert-info mt-3" id="contact-status" role="status" hidden></div>
             </form>
         </div>
         </div>
