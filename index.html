@@ -309,31 +309,57 @@
                 </div>
             </div>
         </div>
-        <div class="modal fade modal-invoice" id="invoice" tabindex="-1" aria-labelledby="invoiceLabel" aria-hidden="true">
+        <div class="modal fade modal-invoice invoice" tabindex="-1" aria-labelledby="invoiceLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content konten-modal">
                     <div class="modal-header kepala-modal">
-                        <h2 class="modal-title fs-5 judul-modal" id="invoiceLabel">Invoice pemesanan</h2>
+                        <h2 class="modal-title fs-5 judul-modal" id="invoiceLabel">Bukti Pemesanan</h2>
                         <button type="button" class="btn-close tombol-tutup-modal" data-bs-dismiss="modal" aria-label="Tutup"></button>
                     </div>
                     <div class="modal-body isi-modal">
-                        <p class="mb-3 pesan-invoice">Terima kasih telah memesan perjalanan bersama JelajahNusa.</p>
-                        <dl class="row mb-0 rincian-invoice">
-                            <dt class="col-5">Nama</dt>
-                            <dd class="col-7" id="invoice-name"></dd>
-                            <dt class="col-5">Paket</dt>
-                            <dd class="col-7" id="invoice-package"></dd>
-                            <dt class="col-5">Jumlah orang</dt>
-                            <dd class="col-7" id="invoice-people"></dd>
-                            <dt class="col-5">Tanggal</dt>
-                            <dd class="col-7" id="invoice-date"></dd>
-                            <dt class="col-5">Harga/orang</dt>
-                            <dd class="col-7" id="invoice-unit-price"></dd>
-                            <dt class="col-5">Total</dt>
-                            <dd class="col-7 fw-bold total-invoice" id="invoice-total"></dd>
-                        </dl>
+                        <article class="ticket-card" aria-label="Bukti pemesanan Jelajah Nusa">
+                            <header class="ticket-brand">
+                                <span class="ticket-brand-icon"><i class="fa-solid fa-plane" aria-hidden="true"></i></span>
+                                <span class="ticket-brand-name">JelajahNusa<small>TRAVEL &amp; TOUR</small></span>
+                                <span class="ticket-status"><i class="fa-solid fa-circle-check" aria-hidden="true"></i> BOOKING DITERIMA</span>
+                            </header>
+                            <div class="ticket-content">
+                                <p class="ticket-eyebrow">E-TIKET PERJALANAN</p>
+                                <h3 class="ticket-title">Detail perjalanan</h3>
+                                <div class="ticket-code">
+                                    <span>KODE BOOKING</span>
+                                    <strong id="invoice-code"></strong>
+                                </div>
+                                <div class="ticket-destination">
+                                    <span class="ticket-field-label">DESTINASI</span>
+                                    <strong id="invoice-package"></strong>
+                                    <span id="invoice-duration"></span>
+                                </div>
+                                <div class="ticket-details">
+                                    <div class="ticket-detail">
+                                        <span class="ticket-field-label">NAMA PEMESAN</span>
+                                        <strong id="invoice-name"></strong>
+                                    </div>
+                                    <div class="ticket-detail">
+                                        <span class="ticket-field-label">TANGGAL PERJALANAN</span>
+                                        <strong id="invoice-date"></strong>
+                                    </div>
+                                    <div class="ticket-detail">
+                                        <span class="ticket-field-label">JUMLAH PENUMPANG</span>
+                                        <strong id="invoice-people"></strong>
+                                    </div>
+                                </div>
+                                <div class="ticket-fare">
+                                    <div><span>Harga per orang</span><strong id="invoice-unit-price"></strong></div>
+                                    <div><span>Jumlah penumpang</span><strong id="invoice-fare-people"></strong></div>
+                                    <div class="ticket-total"><span>TOTAL PEMESANAN</span><strong id="invoice-total"></strong></div>
+                                </div>
+                                <p class="ticket-note"><i class="fa-solid fa-circle-info" aria-hidden="true"></i> Simpan bukti ini untuk konfirmasi perjalanan. Total merupakan ringkasan biaya paket, bukan bukti pembayaran.</p>
+                            </div>
+                        </article>
                     </div>
                     <div class="modal-footer kaki-modal">
+                        <button type="button" class="btn btn-outline-secondary tombol-cetak-tiket" id="print-invoice"><i class="fa-solid fa-print" aria-hidden="true"></i> Cetak tiket</button>
                         <button type="button" class="btn btn-primary tombol-pesan" data-bs-dismiss="modal">Selesai</button>
                     </div>
                 </div>

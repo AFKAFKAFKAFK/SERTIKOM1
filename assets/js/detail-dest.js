@@ -7,14 +7,17 @@ const destinations = {
         itinerary: [
             {
                 title: "Hari 1: KEDATANGAN – PESONA BALI SELATAN – JIMBARAN",
+                image: "assets/images/day-1-bali.jfif",
                 description: `Setibanya di Bandara Internasional I Gusti Ngurah Rai, Anda akan disambut dengan kalungan bunga dan langsung diantar menjelajahi pesona Bali bagian selatan. Destinasi pertama adalah Pantai Melasti atau Pantai Pandawa yang terkenal dengan tebing kapur menjulang dan air lautnya yang jernih. Menjelang sore, perjalanan berlanjut menuju Pura Luhur Uluwatu yang berdiri kokoh di atas tebing curam menghadap Samudra Hindia, tempat Anda dapat menyaksikan pertunjukan Tari Kecak dan Api dengan latar matahari terbenam yang memukau. Malam harinya, Anda diajak menikmati makan malam hidangan laut (seafood) di tepi Pantai Jimbaran sebelum diantar menuju hotel di kawasan Kuta atau Seminyak untuk check-in dan bermalam.`,
             },
             {
                 title: "Hari 2: KINTAMANI – TEGALALANG – PUSAT SENI UBUD",
+                image: "assets/images/day-2-bali.jfif",
                 description: `Setelah sarapan di hotel, Anda diajak bergerak menuju dataran tinggi Kintamani untuk menikmati udara sejuk sambil makan siang dengan panorama langsung menghadap Gunung Batur dan Danau Batur yang tenang. Perjalanan turun melewati kawasan Tegalalang untuk melihat keindahan terasering sawah hijau yang ikonik. Memasuki kawasan Ubud, Anda diajak berjalan-jalan santai melewati Puri Saren Agung (Istana Ubud) dan menikmati waktu bebas di Pasar Seni Ubud untuk berburu kerajinan tangan, lukisan, maupun kain khas Bali. Menjelang malam, Anda diantar kembali ke hotel untuk beristirahat.`,
             },
             {
                 title: "Hari 3: BELANJA OLEH-OLEH – KEPULANGAN",
+                image: "assets/images/day-3-bali.jfif",
                 description: `Setelah sarapan dan proses check-out dari hotel, Anda diajak singgah ke pusat oleh-oleh terbesar di Bali seperti Krisna atau The Keranjang untuk membeli camilan khas seperti Pie Susu, Kacang Disco, hingga kopi Bali. Jika waktu masih mencukupi, Anda dapat berjalan-jalan sejenak di sekitar kawasan pantai Kuta sebelum akhirnya diantar menuju Bandara Ngurah Rai untuk penerbangan kembali ke kota asal.`,
             },
         ],
@@ -36,6 +39,7 @@ const destinations = {
         itinerary: [
             {
                 title: "Hari 1: SORONG – WAISAI – PIAYNEMO – YENBUBA",
+                image: "assets/images/day-1-raja-ampat.jfif",
                 description: `Perjalanan dimulai pada pagi hari dengan penjemputan di Bandara Domine Eduard Osok Sorong menuju Pelabuhan Rakyat untuk menyeberang menggunakan kapal cepat menuju Waisai, ibu kota Kabupaten Raja Ampat. Setibanya di Waisai, Anda langsung diajak island hopping menuju Piaynemo, ikon utama Raja Ampat, di mana Anda akan mendaki anak tangga kayu untuk menyaksikan gugusan pulau karst di atas lautan biru toska. Tak jauh dari sana, Anda singgah di Telaga Bintang yang membentuk bintang alami bila dilihat dari puncak bukit. Setelah makan siang di Desa Wisata Sauwandarek sambil berinteraksi dengan warga lokal, Anda diajak snorkeling di Dermaga Yenbuba yang terkenal dengan taman karang dan ribuan ikan warna-warni. Menjelang malam, Anda diantar menuju resor atau homestay tepi pantai untuk makan malam dan bermalam.`,
             },
             {
@@ -143,6 +147,9 @@ if (!destination) {
     document.querySelector(".detail-lokasi").textContent = destination.location;
     document.querySelector(".detail-judul").textContent = destination.name;
     document.querySelector(".detail-durasi").textContent = destination.duration;
+    const choosePackageLink = document.querySelector(".detail-pilih-paket");
+    choosePackageLink.href = `index.html?paket=${encodeURIComponent(destinationKey)}#destinasi`;
+    choosePackageLink.hidden = false;
     const itineraryList = document.querySelector(".detail-itinerary");
     itineraryList.hidden = false;
     destination.itinerary.forEach((day) => {

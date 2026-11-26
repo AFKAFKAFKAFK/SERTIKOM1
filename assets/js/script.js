@@ -48,7 +48,8 @@ const packages = {
 
 const bookingModalElement = document.querySelector("#paket");
 const bookingModal = new bootstrap.Modal(bookingModalElement);
-const invoiceModal = new bootstrap.Modal(document.querySelector("#invoice"));
+const invoiceModal = new bootstrap.Modal(document.querySelector(".invoice"));
+const printInvoiceButton = document.querySelector("#print-invoice");
 const navbarCollapseElement = document.querySelector("#navbarNav");
 const chooser = document.querySelector("#package-chooser");
 const packageOptions = document.querySelector("#package-options");
@@ -69,6 +70,8 @@ let selectedPackage = null;
 let bookingSubmitted = false;
 let contactSubmitted = false;
 let packageSwiper = null;
+
+printInvoiceButton.addEventListener("click", () => window.print());
 
 const bookingFields = [
     {
@@ -380,10 +383,12 @@ bookingForm.addEventListener("submit", (event) => {
 
     const people = Number(peopleInput.value);
     const total = selectedPackage.price * people;
+    document.querySelector("#invoice-code").textContent = `JN-${Date.now().toString(36).toUpperCase()}`;
     document.querySelector("#invoice-name").textContent = nameInput.value.trim();
-    document.querySelector("#invoice-package").textContent =
-        `${selectedPackage.name} - ${selectedPackage.duration}`;
-    document.querySelector("#invoice-people").textContent = String(people);
+    document.querySelector("#invoice-package").textContent = selectedPackage.name;
+    document.querySelector("#invoice-duration").textContent = selectedPackage.duration;
+    document.querySelector("#invoice-people").textContent = `${people} orang`;
+    document.querySelector("#invoice-fare-people").textContent = `${people} orang`;
     document.querySelector("#invoice-date").textContent = new Date(`${travelDate.value}T00:00:00`)
         .toLocaleDateString("id-ID", { dateStyle: "long" });
     document.querySelector("#invoice-unit-price").textContent = currency.format(selectedPackage.price);
@@ -406,3 +411,11 @@ bookingModalElement.addEventListener("hidden.bs.modal", () => {
     selectedPackage = null;
     document.querySelector("#paketLabel").textContent = "Pilih paket Anda";
 });
+
+const requestedPackage = new URLSearchParams(window.location.search).get("paket");
+if (requestedPackage && packages[requestedPackage]) {
+    showPackageDetails(requestedPackage);
+    const cleanUrl = new URL(window.location.href);
+    cleanUrl.searchParams.delete("paket");
+    window.history.replaceState(null, "", `${cleanUrl.pathname}${cleanUrl.search}${cleanUrl.hash}`);
+}

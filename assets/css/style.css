@@ -1,5 +1,9 @@
 :root {
-    --color-accent-orange: #ff9a35;
+    --color-accent-orange: #ffd051;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 .halaman {
@@ -473,8 +477,198 @@
     padding: 24px;
 }
 
-.pemilih-paket > p, .pesan-invoice, .rincian-invoice dt {
+.pemilih-paket > p {
     color: #475569;
+}
+
+.modal-invoice .modal-dialog {
+    max-width: 580px;
+}
+
+.ticket-card {
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 12px 28px rgba(21, 40, 71, 0.08);
+}
+
+.ticket-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 22px;
+    border-bottom: 1px solid #e8edf3;
+    background: #f8fafc;
+}
+
+.ticket-brand-icon {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    place-items: center;
+    border-radius: 12px;
+    background: #152847;
+    color: #fff;
+}
+
+.ticket-brand-name {
+    display: flex;
+    flex-direction: column;
+    color: #152847;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.ticket-brand-name small {
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 9px;
+    letter-spacing: 1.2px;
+}
+
+.ticket-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    padding: 7px 10px;
+    border-radius: 50px;
+    background: #e8f7ef;
+    color: #18794e;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+.ticket-content {
+    padding: 22px;
+}
+
+.ticket-eyebrow, .ticket-field-label, .ticket-code > span {
+    display: block;
+    margin: 0 0 6px;
+    color: #64748b;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.ticket-title {
+    margin: 0 0 18px;
+    color: #152847;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.ticket-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border: 1px dashed #cbd5e1;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.ticket-code > span {
+    margin: 0;
+}
+
+.ticket-code strong {
+    color: #152847;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.ticket-destination {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    padding: 16px;
+    border-left: 4px solid var(--color-accent-orange);
+    border-radius: 0 10px 10px 0;
+    background: #fff9eb;
+}
+
+.ticket-destination strong {
+    color: #152847;
+    font-size: 21px;
+}
+
+.ticket-destination > span:last-child {
+    margin-top: 3px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.ticket-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 20px;
+    padding: 2px 0 18px;
+}
+
+.ticket-detail strong {
+    color: #1e293b;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.ticket-fare {
+    padding-top: 14px;
+    border-top: 1px dashed #cbd5e1;
+}
+
+.ticket-fare > div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 5px 0;
+    color: #475569;
+    font-size: 13px;
+}
+
+.ticket-fare > div strong {
+    color: #1e293b;
+}
+
+.ticket-fare .ticket-total {
+    align-items: center;
+    margin-top: 8px;
+    padding: 14px 0 0;
+    border-top: 1px solid #e2e8f0;
+    color: #152847;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.ticket-fare .ticket-total strong {
+    color: #152847;
+    font-size: 22px;
+}
+
+.ticket-note {
+    display: flex;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 11px 12px;
+    border-radius: 9px;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.ticket-note i {
+    margin-top: 2px;
+    color: #152847;
 }
 
 .paket-swiper {
@@ -618,12 +812,10 @@
     border-top-color: #dfe5e2;
 }
 
-.rincian-invoice dd {
-    color: #1d2a27;
-}
-
-.rincian-invoice .total-invoice {
-    color: #152847;
+.tombol-cetak-tiket {
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-weight: 700;
 }
 
 .kontak-card {
@@ -740,6 +932,10 @@
 .detail-durasi, .detail-itinerary-description {
     color: #475569;
     line-height: 1.7;
+}
+
+.detail-pilih-paket {
+    margin: 24px 0;
 }
 
 .detail-itinerary-title {
@@ -930,6 +1126,28 @@
     .modal-pemesanan .isi-modal, .modal-invoice .isi-modal {
         padding: 20px;
     }
+    .ticket-brand {
+        flex-wrap: wrap;
+        gap: 9px;
+        padding: 15px;
+    }
+
+    .ticket-status {
+        padding: 6px 8px;
+        font-size: 9px;
+    }
+
+    .ticket-content {
+        padding: 18px 16px;
+    }
+
+    .ticket-details {
+        gap: 14px 12px;
+    }
+
+    .ticket-fare .ticket-total strong {
+        font-size: 19px;
+    }
     .gambar-paket-modal {
         height: 200px;
     }
@@ -1054,6 +1272,57 @@
 
     .footer-logo {
         width: 220px;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden !important;
+    }
+
+    .invoice, .invoice * {
+        visibility: visible !important;
+    }
+
+    body {
+        overflow: visible !important;
+    }
+
+    .invoice {
+        position: absolute !important;
+        inset: 0 !important;
+        display: block !important;
+        overflow: visible !important;
+        background: #fff !important;
+    }
+
+    .invoice .modal-dialog {
+        width: 100% !important;
+        max-width: 620px !important;
+        margin: 0 auto !important;
+    }
+
+    .invoice .modal-content {
+        overflow: visible !important;
+        border: 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .invoice .modal-header, .invoice .modal-footer, .modal-backdrop {
+        display: none !important;
+    }
+
+    .invoice .modal-body {
+        padding: 0 !important;
+    }
+
+    .ticket-card {
+        border-color: #cbd5e1 !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
     }
 }
 
