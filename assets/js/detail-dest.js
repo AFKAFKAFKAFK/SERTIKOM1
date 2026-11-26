@@ -162,7 +162,7 @@ if (!destination) {
 
         const link = document.createElement("a");
         link.className = "detail-lainnya-link";
-        link.href = `detail-dest.html?destinasi=${key}`;
+        link.href = `?destinasi=${key}`;
 
         const otherImage = document.createElement("img");
         otherImage.className = "detail-lainnya-gambar";

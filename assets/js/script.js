@@ -291,9 +291,44 @@ bookingModalElement.addEventListener("show.bs.modal", () => {
         closeMobileNavbar();
     });
 
-    document.querySelectorAll(".navbar-nav .nav-link").forEach((link) => {
-        link.addEventListener("click", closeMobileNavbar);
+const navbarLinks = Array.from(document.querySelectorAll(".navbar-nav .nav-link"));
+const navbarSections = navbarLinks
+    .map((link) => document.querySelector(link.hash))
+    .filter(Boolean);
+
+function setActiveNavbarLink(hash) {
+    navbarLinks.forEach((link) => {
+        const isActive = link.hash === hash;
+        link.classList.toggle("active", isActive);
+        if (isActive) {
+            link.setAttribute("aria-current", "page");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+}
+
+function updateActiveNavbarLink() {
+    const activationPoint = window.innerHeight * 0.35;
+    const activeSection = [...navbarSections].reverse().find(
+        (section) => section.getBoundingClientRect().top <= activationPoint,
+    ) || navbarSections[0];
+
+    if (activeSection) {
+        setActiveNavbarLink(`#${activeSection.id}`);
+    }
+}
+
+navbarLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        setActiveNavbarLink(link.hash);
+        closeMobileNavbar();
+    });
 });
+
+window.addEventListener("scroll", updateActiveNavbarLink, { passive: true });
+window.addEventListener("resize", updateActiveNavbarLink);
+updateActiveNavbarLink();
 
 document.querySelectorAll(".button-hero-2").forEach((button) => {
     button.addEventListener("click", (event) => {
