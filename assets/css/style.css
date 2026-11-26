@@ -23,7 +23,7 @@
     margin: 24px auto;
     backdrop-filter: blur(4px);
     border: 2px solid;
-    border-color: rgba(255, 255, 255, 0.3)
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .image-navbar {
@@ -65,7 +65,7 @@
     background-size: cover;
     transform: scale(1.1);
     transform-origin: center;
-    transition: transform 1000ms ease;
+    transition: transform 2000ms ease-out;
     content: "";
 }
 
@@ -96,7 +96,7 @@
     top: 50%;
     z-index: 2;
     width: 90%;
-    max-width: 1140px;
+    max-width: 1300px;
     margin: 0 auto;
     transform: translateY(-50%);
     pointer-events: none;
@@ -127,8 +127,7 @@
     pointer-events: auto;
 }
 
-.button-hero,
-.button-hero-2 {
+.button-hero, .button-hero-2 {
     display: inline-block;
     padding: 14px 28px;
     border-radius: 50px;
@@ -202,26 +201,11 @@
     color: rgba(255, 255, 255, 0.8);
 }
 
-.tentang-kami-subtitle {
-    display: inline-block;
-    color: #152847;
-    background-color: rgba(21, 40, 71, 0.08);
-    padding: 6px 16px;
-    border-radius: 50px;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-bottom: 14px;
-}
-
-.tentang-kami-title {
-    color: #152847;
-    font-size: 44px;
-    font-weight: 700;
+.tentang-kami-copy .section-title {
     margin-bottom: 20px;
 }
 
-.tentang-kami-desc {
+.section-desc {
     color: #475569;
     font-size: 16px;
     line-height: 1.7;
@@ -234,7 +218,7 @@
     gap: 16px;
 }
 
-.value-card {
+.value-card, .kontak-card {
     display: flex;
     align-items: flex-start;
     gap: 12px;
@@ -245,7 +229,7 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.value-card:hover {
+.value-card:hover, .kontak-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 24px rgba(21, 40, 71, 0.08);
 }
@@ -544,25 +528,25 @@
     font-size: 24px;
 }
 
-.form-pemesanan .label-form {
+.form-pemesanan .label-form, .form-kontak .label-form {
     font-size: 14px;
     font-weight: 700;
 }
 
-.form-pemesanan .input-form {
+.form-pemesanan .input-form, .form-kontak .input-form {
     padding: 11px 14px;
     border-color: #dfe5e2;
     border-radius: 10px;
     background-color: #fafbfa;
 }
 
-.form-pemesanan .input-form:focus {
+.form-pemesanan .input-form:focus, .form-kontak .input-form:focus {
     border-color: #152847;
     background-color: #fff;
     box-shadow: 0 0 0 4px rgba(21, 40, 71, 0.12);
 }
 
-.form-pemesanan .input-form.is-invalid, .form-pemesanan .input-form.is-invalid:focus {
+.form-pemesanan .input-form.is-invalid, .form-pemesanan .input-form.is-invalid:focus, .form-kontak .input-form.is-invalid, .form-kontak .input-form.is-invalid:focus {
     border-color: #dc3545;
     box-shadow: 0 0 0 4px rgba(220, 53, 69, 0.15);
 }
@@ -571,15 +555,16 @@
     background-image: none;
 }
 
-.form-pemesanan .tombol-pesan, .modal-invoice .tombol-pesan {
+.form-pemesanan .tombol-pesan, .modal-invoice .tombol-pesan, .form-kontak .tombol-kirim {
     padding: 12px;
     border-color: #152847;
     border-radius: 10px;
     background-color: #152847;
+    color: #fff;
     font-weight: 700;
 }
 
-.form-pemesanan .tombol-pesan:hover, .modal-invoice .tombol-pesan:hover {
+.form-pemesanan .tombol-pesan:hover, .modal-invoice .tombol-pesan:hover, .form-kontak .tombol-kirim:hover {
     border-color: #10203d;
     background-color: #10203d;
 }
@@ -597,79 +582,29 @@
     color: #152847;
 }
 
-@media (max-width: 576px) {
-    .modal-pemesanan .isi-modal,
-    .modal-invoice .isi-modal {
-        padding: 20px;
-    }
-    .gambar-paket-modal {
-        height: 200px;
-    }
-    .destinasi-section {
-        padding: 64px 0;
-    }
+.kontak-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding: 20px;
+    border: 1px solid rgba(21, 40, 71, 0.08);
+    border-radius: 16px;
+    background-color: #fff;
+}
 
-    .destinasi-header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.kontak-card-title {
+    margin-bottom: 8px;
+    color: #152847;
+    font-size: 18px;
+    font-weight: 700;
+}
 
-    .tentang-kami-section {
-        padding: 64px 0;
-    }
-
-    .tentang-kami-image {
-        height: 320px;
-    }
-
-    .tentang-kami-badge {
-        bottom: 12px;
-        left: 12px;
-        max-width: calc(100% - 24px);
-        padding: 10px 14px;
-        border-radius: 12px;
-    }
-
-    .badge-title {
-        font-size: 15px;
-    }
-
-    .badge-sub {
-        font-size: 11px;
-    }
-
-    .values-grid {
-        grid-template-columns: 1fr;
-    }
-    .container-website {
-        padding: 0 12px;
-    }
-
-    .navbar {
-        margin: 12px auto;
-    }
-
-    .hero-text-left {
-        width: calc(100% - 32px);
-    }
-
-    .title-hero {
-        font-size: 34px;
-    }
-
-    .hero-buttons {
-        gap: 12px;
-        margin-top: 20px;
-    }
-
-    .button-hero,
-    .button-hero-2 {
-        padding: 12px 20px;
-    }
-    
-    .tentang-kami-title {
-        font-size: 34px;
-    }
+.kontak-card-desc {
+    margin: 0;
+    color: #475569;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
 }
 
 .dest-image-link {
@@ -739,8 +674,7 @@
     font-weight: 700;
 }
 
-.detail-durasi,
-.detail-paragraf {
+.detail-durasi, .detail-paragraf {
     color: #475569;
     line-height: 1.7;
 }
@@ -823,7 +757,92 @@
     color: #b02a37;
 }
 
+.footer-section {
+    background-color: #152847;
+}
+
+.footer-button, .footer-alamat {
+    color: #cee2ff;
+    font-size: 16px;
+}
+
 @media (max-width: 576px) {
+    .section-title {
+        max-width: 100%;
+        font-size: 28px;
+    }
+    .modal-pemesanan .isi-modal, .modal-invoice .isi-modal {
+        padding: 20px;
+    }
+    .gambar-paket-modal {
+        height: 200px;
+    }
+    .destinasi-section {
+        padding: 64px 0;
+    }
+
+    .destinasi-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tentang-kami-section {
+        padding: 64px 0;
+    }
+
+    .tentang-kami-image {
+        height: 320px;
+    }
+
+    .tentang-kami-badge {
+        bottom: 12px;
+        left: 12px;
+        max-width: calc(100% - 24px);
+        padding: 10px 14px;
+        border-radius: 12px;
+    }
+
+    .badge-title {
+        font-size: 15px;
+    }
+
+    .badge-sub {
+        font-size: 11px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    .container-website {
+        padding: 0 12px;
+    }
+
+    .navbar {
+        margin: 12px auto;
+    }
+
+    .hero-text-left {
+        width: calc(100% - 32px);
+    }
+
+    .title-hero {
+        font-size: 34px;
+    }
+
+    .hero-buttons {
+        flex-wrap: nowrap;
+        gap: 8px;
+        margin-top: 20px;
+    }
+
+    .button-hero, .button-hero-2 {
+        flex: 1;
+        padding: 10px 8px;
+        font-size: 13px;
+        text-align: center;
+        white-space: nowrap;
+    }
+    
     .detail-destinasi {
         width: calc(100% - 24px);
         margin: 20px auto;
@@ -837,8 +856,7 @@
         margin-top: 28px;
     }
 
-    .detail-paragraf,
-    .detail-poin-isi {
+    .detail-paragraf, .detail-poin-isi {
         line-height: 1.75;
     }
 
@@ -846,6 +864,21 @@
         gap: 24px;
         margin-top: 28px;
         padding-left: 24px;
+    }
+    .kontak-card-container {
+        margin-bottom: 4.5rem;
+    }
+
+    .footer-left {
+        text-align: center;
+    }
+
+    .footer-logo-link {
+        display: inline-block;
+    }
+
+    .footer-logo {
+        width: 220px;
     }
 }
 
@@ -871,8 +904,7 @@
         margin-top: 14px;
     }
 
-    .button-hero,
-    .button-hero-2 {
+    .button-hero, .button-hero-2 {
         padding: 9px 16px;
     }
 }

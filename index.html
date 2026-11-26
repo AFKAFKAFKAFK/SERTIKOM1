@@ -39,13 +39,10 @@
                     <a class="nav-link" href="#tentang-kami">Tentang Kami</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#destinasi">Destinasi</a>
+                    <a class="nav-link" href="#destinasi">Destinasi & Paket</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#paket" id="nav-paket">Paket</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Kontak</a>
+                    <a class="nav-link" href="#kontak">Kontak</a>
                 </li>
                 </ul>
             </div>
@@ -96,10 +93,10 @@
                 </div>
 
                 <!-- Kolom Kanan: Teks & Nilai Layanan atau Keunggulan-->
-                <div class="col-lg-6">
-                    <span class="tentang-kami-subtitle">TENTANG KAMI</span>
-                    <h2 class="tentang-kami-title">Your Journey, Our Passion</h2>
-                    <p class="tentang-kami-desc">
+                <div class="col-lg-6 tentang-kami-copy">
+                    <span class="section-subtitle">TENTANG KAMI</span>
+                    <h2 class="section-title">Liburanmu, Prioritas Kami</h2>
+                    <p class="section-desc">
                     JelajahNusa hadir untuk membantu wisatawan menjelajahi keindahan Indonesia 
                     melalui perjalanan yang nyaman, terencana, dan berkesan. Kami percaya 
                     setiap perjalanan memiliki cerita yang layak dikenang.
@@ -264,7 +261,7 @@
         </div>
     </section>
     <!-- PAKET -->
-    <section class="bagian-paket">
+    <section class="paket-section">
         <div class="modal fade modal-pemesanan" id="paket" tabindex="-1" aria-labelledby="paketLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content konten-modal">
@@ -341,6 +338,103 @@
             </div>
         </div>
     </section>
+    <section class="kontak-section container mb-4" id="kontak">
+        <div class="kontak-header">
+            <span class="section-subtitle">KONTAK KAMI</span>
+            <h1 class="section-title">Mulai Rencana Liburanmu</h1>
+            <p class="section-desc pt-2">Punya pertanyaan atau ingin merencanakan liburan? Hubungi tim JelajahNusa melalui informasi berikut.</p>
+        </div>
+        <div class="kontak-container row gx-5">
+        <div class="col-12 col-lg-6 kontak-left">
+            <div class="kontak-card-container row g-3">
+                <div class="col-12">
+                    <div class="kontak-card">
+                        <h2 class="kontak-card-title">Alamat Kantor</h2>
+                        <p class="kontak-card-desc">Jl. Poras No. 7, Bogor</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="kontak-card">
+                        <h2 class="kontak-card-title">Nomor Telepon</h2>
+                        <p class="kontak-card-desc">(0251) 8376 224</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="kontak-card">
+                        <h2 class="kontak-card-title">Email Bisnis</h2>
+                        <p class="kontak-card-desc">nusatravel@jelajahnusa.id</p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="kontak-card">
+                        <h2 class="kontak-card-title">Instagram</h2>
+                        <p class="kontak-card-desc">@jelajahnusa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 kontak-right">
+            <form class="form-kontak" id="contact-form" novalidate>
+                <div class="mb-3">
+                    <label for="contact-name" class="form-label label-form">Nama Lengkap</label>
+                    <input type="text" class="form-control input-form" id="contact-name" name="name" autocomplete="name" required aria-describedby="contact-name-error">
+                    <div class="invalid-feedback" id="contact-name-error" aria-live="polite"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="contact-email" class="form-label label-form">Email</label>
+                    <input type="email" class="form-control input-form" id="contact-email" name="email" autocomplete="email" required aria-describedby="contact-email-error">
+                    <div class="invalid-feedback" id="contact-email-error" aria-live="polite"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="contact-subject" class="form-label label-form">Subjek</label>
+                    <input type="text" class="form-control input-form" id="contact-subject" name="subject" required aria-describedby="contact-subject-error">
+                    <div class="invalid-feedback" id="contact-subject-error" aria-live="polite"></div>
+                </div>
+                <div class="mb-3">
+                    <label for="contact-message" class="form-label label-form">Pesan</label>
+                    <textarea class="form-control input-form" id="contact-message" name="message" rows="5" required aria-describedby="contact-message-error"></textarea>
+                    <div class="invalid-feedback" id="contact-message-error" aria-live="polite"></div>
+                </div>
+                <button type="submit" class="btn w-100 tombol-kirim">Kirim Pesan</button>
+                <div class="alert alert-info mt-3" id="contact-status" role="status" hidden></div>
+            </form>
+        </div>
+        </div>
+    </section>
+    <footer class="footer-section text-white">
+        <div class="footer-container container py-5">
+            <div class="row g-4">
+                <div class="col-12 col-md-5 footer-left">
+                    <a class="footer-logo-link" href="#hero" aria-label="JelajahNusa - Beranda">
+                        <img src="assets/images/logo-white.png" alt="JelajahNusa" width="160" class="footer-logo img-fluid mb-3">
+                    </a>
+                    <p class="footer-desc text-white-50 mb-0">Mengajak Anda mengenal lebih dekat pesona alam dan budaya Indonesia. JelajahNusa hadir memberikan pelayanan terbaik untuk memastikan setiap momen perjalanan Anda berjalan sempurna.</p>
+                </div>
+                <div class="col-12 col-md-7 footer-right">
+                    <div class="row g-4">
+                        <div class="col-6">
+                            <h2 class="h4 mb-3">Jelajahi</h2>
+                            <ul class="footer-button-container list-unstyled d-grid gap-2 mb-0">
+                                <li><a class="footer-button text-decoration-none" href="#hero">Beranda</a></li>
+                                <li><a class="footer-button text-decoration-none" href="#tentang-kami">Tentang Kami</a></li>
+                                <li><a class="footer-button text-decoration-none" href="#destinasi">Destinasi</a></li>
+                                <li><a class="footer-button text-decoration-none" href="#kontak">Kontak</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <h2 class="h4 mb-3">Hubungi Kami</h2>
+                            <address class="footer-alamat">Jl. Poras No. 7, Bogor</address>
+                            <p class="mb-2"><a class="footer-button text-decoration-none" href="tel:+622518376224">(0251) 8376 224</a></p>
+                            <p class="mb-2"><a class="footer-button text-decoration-none" href="mailto:nusatravel@jelajahnusa.id">nusatravel@jelajahnusa.id</a></p>
+                            <a class="footer-button text-decoration-none" href="https://www.instagram.com/jelajahnusa/" target="_blank" rel="noopener noreferrer">Instagram: @jelajahnusa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <p class="footer-copyright text-white-50 text-center mb-0">&copy; 2026 JelajahNusa. Hak cipta dilindungi.</p>
+        </div>
+    </footer>
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
     <script>

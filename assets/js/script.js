@@ -56,6 +56,8 @@ const bookingForm = document.querySelector("#booking-form");
 const travelDate = document.querySelector("#travel-date");
 const nameInput = document.querySelector("#customer-name");
 const peopleInput = document.querySelector("#traveler-count");
+const contactForm = document.querySelector("#contact-form");
+const contactStatus = document.querySelector("#contact-status");
 const currency = new Intl.NumberFormat("id-ID", {
     style: "currency",
     currency: "IDR",
@@ -63,6 +65,7 @@ const currency = new Intl.NumberFormat("id-ID", {
 });
 let selectedPackage = null;
 let bookingSubmitted = false;
+let contactSubmitted = false;
 let packageSwiper = null;
 
 const bookingFields = [
@@ -99,6 +102,39 @@ const bookingFields = [
     },
 ];
 
+const contactFields = [
+    {
+        input: document.querySelector("#contact-name"),
+        feedback: document.querySelector("#contact-name-error"),
+        getError() {
+            return this.input.value.trim() ? "" : "Nama lengkap wajib diisi.";
+        },
+    },
+    {
+        input: document.querySelector("#contact-email"),
+        feedback: document.querySelector("#contact-email-error"),
+        getError() {
+            if (!this.input.value.trim()) return "Email wajib diisi.";
+            if (!this.input.validity.valid) return "Masukkan alamat email yang valid.";
+            return "";
+        },
+    },
+    {
+        input: document.querySelector("#contact-subject"),
+        feedback: document.querySelector("#contact-subject-error"),
+        getError() {
+            return this.input.value.trim() ? "" : "Subjek wajib diisi.";
+        },
+    },
+    {
+        input: document.querySelector("#contact-message"),
+        feedback: document.querySelector("#contact-message-error"),
+        getError() {
+            return this.input.value.trim() ? "" : "Pesan wajib diisi.";
+        },
+    },
+];
+
 function validateBookingField(field) {
     const error = field.getError();
     field.input.classList.toggle("is-invalid", Boolean(error));
@@ -118,6 +154,42 @@ bookingFields.forEach((field) => {
             validateBookingField(field);
         }
     });
+});
+
+function validateContactField(field) {
+    const error = field.getError();
+    field.input.classList.toggle("is-invalid", Boolean(error));
+    if (error) {
+        field.input.setAttribute("aria-invalid", "true");
+    } else {
+        field.input.removeAttribute("aria-invalid");
+    }
+    field.feedback.textContent = error;
+    return !error;
+}
+
+contactFields.forEach((field) => {
+    field.input.addEventListener("blur", () => validateContactField(field));
+    field.input.addEventListener("input", () => {
+        if (contactSubmitted || field.input.classList.contains("is-invalid")) {
+            validateContactField(field);
+        }
+        contactStatus.hidden = true;
+        contactStatus.textContent = "";
+    });
+});
+
+contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    contactSubmitted = true;
+    const fieldsAreValid = contactFields.map(validateContactField).every(Boolean);
+    if (!fieldsAreValid) {
+        contactFields.find((field) => field.input.classList.contains("is-invalid")).input.focus();
+        return;
+    }
+
+    contactStatus.textContent = "Pesan telah diterima oleh JelajahNusa. Mohon tunggu balasan dari konsultan perjalanan kami.";
+    contactStatus.hidden = false;
 });
 
 function setMinimumTravelDate() {
@@ -223,7 +295,7 @@ bookingModalElement.addEventListener("show.bs.modal", () => {
         link.addEventListener("click", closeMobileNavbar);
 });
 
-document.querySelectorAll("#nav-paket, .button-hero-2").forEach((button) => {
+document.querySelectorAll(".button-hero-2").forEach((button) => {
     button.addEventListener("click", (event) => {
         event.preventDefault();
         selectedPackage = null;
