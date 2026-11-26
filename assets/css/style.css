@@ -564,7 +564,7 @@
     font-weight: 700;
 }
 
-.form-pemesanan .tombol-pesan:hover, .modal-invoice .tombol-pesan:hover, .form-kontak .tombol-kirim:hover {
+.form-pemesanan .tombol-pesan:hover, .modal-invoice .tombol-pesan:hover {
     border-color: #10203d;
     background-color: #10203d;
 }
